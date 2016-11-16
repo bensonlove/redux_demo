@@ -3,6 +3,6 @@
 #### Use
 ```javaScript
 npm install
-node demo1.js
+node demo1/app.js
 ```
 

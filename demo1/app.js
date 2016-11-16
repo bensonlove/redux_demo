@@ -3,16 +3,16 @@
 var { createStore } = require('redux');
 
 
-function programLanguage(state = 'JavaScript', action) {
+var defaultState = 'JavaScript'
+function programLanguage(state = defaultState, action) {
 	switch (action.type) {
 		case 'IOS':
-			return action.language;
+			return state + ' ' +action.language;
 		case 'WEB':
-			return action.language;
+			return state + ' ' +action.language;
 		case 'SNACK':
-			return action.language;
-		default:
-			return state;
+			return state + ' ' +action.language;
+		default: return state;
 	}
 }
 
@@ -26,10 +26,7 @@ store.subscribe(() =>
 	console.log(store.getState())
 );
 
-// 改变内部 state 唯一方法是 dispatch 一个 action。
-// 调用dispatch方法时 会调用Reducer即本例中的counter方法 由于store设置了状态变化的通知 所以会打印
-
-store.dispatch({ language: 'None', type: 'default' });
+store.dispatch({ type: 'default' });
 // JavaScript
 store.dispatch({ language: 'Swift', type: 'IOS' });
 // Swift

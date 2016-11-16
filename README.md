@@ -1,5 +1,8 @@
 # redux_demo
 
 #### Use
+```javaScript
 npm install
-node xx.js
+node demo1.js
+```
+

@@ -26,6 +26,7 @@ store.subscribe(() =>
 	console.log(store.getState())
 );
 
+//dispatch内部会调用Reducer
 store.dispatch({ type: 'default' });
 // JavaScript
 store.dispatch({ language: 'Swift', type: 'IOS' });

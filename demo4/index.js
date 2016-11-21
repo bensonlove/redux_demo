@@ -13,6 +13,8 @@ const store = createStore(
     loggerMiddleware // 一个很便捷的 middleware，用来打印 action 日志
   )
 )
+// applyMiddleware时会调用
+// 
 
 //
 store.dispatch(selectSubreddit('reactjs'))
